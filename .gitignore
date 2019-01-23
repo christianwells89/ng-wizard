@@ -1,0 +1,10 @@
+_site
+.git
+.sass-cache
+.jekyll-metadata
+node_modules
+demo/node_modules
+demo/dist
+.DS_Store
+.idea
+npm-debug.log

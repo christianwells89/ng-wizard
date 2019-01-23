@@ -1,0 +1,28 @@
+<div class="container">
+  <wizard-header
+    [wizardTitle]="wizardTitle$ | async"
+    [stepTitle]="stepTitle$ | async"
+    [stepNumber]="currentStepNumber$ | async"
+    [totalSteps]="stepCount$ | async"
+  >
+  </wizard-header>
+
+  <wizard-step-content *ngIf="(wizardLoaded$ | async)" [step]="currentStep$ | async">
+  </wizard-step-content>
+
+  <wizard-navigation
+    *ngIf="(wizardLoaded$ | async) && !(wizardFinished$ | async)"
+    [isFirstStep]="(currentStepNumber$ | async) === 1"
+    [isLastStep]="isLastStep$ | async"
+    [isStepLoading]="isStepLoading$ | async"
+    (next)="next($event)"
+    (previous)="previous($event)"
+  >
+  </wizard-navigation>
+
+  <wizard-loading *ngIf="(wizardLoading$ | async)"></wizard-loading>
+
+  <div class="alert alert-danger" *ngIf="!(wizardLoading$ | async) && !(wizardLoaded$ | async)">
+    Your wizard has failed to load.
+  </div>
+</div>

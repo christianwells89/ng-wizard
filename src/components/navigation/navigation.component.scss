@@ -1,0 +1,17 @@
+.row {
+  padding-top: 15px;
+}
+
+// this probably shouldn't be a global, but other places will need this eg. nav buttons
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+fa-icon {
+  padding: 0 5px;
+}
+
+.blue-hr {
+  background-color: #17a2b8;
+}

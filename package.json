@@ -1,0 +1,46 @@
+{
+  "name": "ng-wizard",
+  "version": "1.0.0",
+  "description": "A component to handle the navigation and state of a step-based wizard. Uses bootstrap styling for buttons, colors etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChronosCog/wizard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChronosCog/wizard/issues"
+  },
+  "homepage": "https://github.com/ChronosCog/wizard#readme",
+  "dependencies": {
+    "@angular/animations": "^7.2.2",
+    "@angular/common": "^7.2.2",
+    "@angular/compiler": "^7.2.2",
+    "@angular/core": "^7.2.2",
+    "@angular/forms": "^7.2.2",
+    "@angular/platform-browser": "^7.2.2",
+    "@fortawesome/angular-fontawesome": "^0.3.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.12",
+    "@fortawesome/free-solid-svg-icons": "^5.6.3",
+    "@ngrx/effects": "^7.1.0",
+    "@ngrx/store": "^7.1.0",
+    "@types/lodash": "^4.14.120",
+    "bootstrap": "^4.2.1",
+    "lodash": "^4.17.11",
+    "ngx-toastr": "^9.1.1",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.7",
+    "@types/jasminewd2": "^2.0.6",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.4",
+    "karma-jasmine": "^2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "typescript": "^3.2.4"
+  }
+}

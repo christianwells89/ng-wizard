@@ -1,0 +1,33 @@
+<div class="panel">
+  <hr class="blue-hr" />
+
+  <div class="row">
+    <div class="col-3">
+      <button
+        class="btn btn-block btn-info"
+        [disabled]="isStepLoading"
+        (click)="previousStep()"
+        *ngIf="!isFirstStep"
+      >
+        <fa-icon [icon]="fontPrev"></fa-icon>
+        <span>Prev</span>
+      </button>
+    </div>
+    <div class="col-3 offset-6 text-right">
+      <button
+        [ngClass]="{ 'btn btn-block': true, 'btn-info': !isLastStep, 'btn-success': isLastStep }"
+        class="btn btn-block"
+        [disabled]="isStepLoading"
+        (click)="nextStep()"
+      >
+        <span>{{ isLastStep ? 'Finish' : 'Next' }}</span>
+        <ng-container *ngTemplateOutlet="nextIcon"></ng-container>
+        <ng-template #arrowIcon> <fa-icon [icon]="fontNext"></fa-icon> </ng-template>
+        <ng-template #spinnerIcon>
+          <fa-icon [icon]="fontSpinner" spin="true"></fa-icon>
+        </ng-template>
+        <ng-template #checkIcon> <fa-icon [icon]="fontCheck"></fa-icon> </ng-template>
+      </button>
+    </div>
+  </div>
+</div>
